@@ -8,17 +8,16 @@
 
 import random
 
-"""
+def flip_coin():
+    """
     Description:
             This function takes the no of flips as input and output the percentage of head and tails
     Parameter:
             None
     Return:
-            How many time coin was flip
+            Return the function
 
-"""
-
-def flip_coin():
+    """
     no_of_flips = int(input("Enter the number of times you want to flip coin :"))
     if no_of_flips < 0:
         print('Enter the positive value')
