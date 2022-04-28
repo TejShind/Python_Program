@@ -23,22 +23,21 @@ def prime_factor():
     if number == 0 or number == 1:
         print(f"{number} has no prime factor")
         return
-    track1 = 0
+    num1 = 0
     while number % 2 == 0:
-        if track1 == 0:
+        if num1 == 0:
             print(2)
-            track1 = 1
+            num1 = 1
         number = number // 2
     for i in range(3, int(math.sqrt(number)) + 1, 2):
-        track2 = 0
+        num2 = 0
         while number % i == 0:
-            if track2 == 0:
+            if num2 == 0:
                 print(i)
-                track2 = 1
+                num2 = 1
             number = number // i
     if number > 2:
         print(number)
 
 
 prime_factor()
-print(prime_factor.__doc__)
