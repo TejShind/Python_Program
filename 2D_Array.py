@@ -2,32 +2,29 @@
 @Author: Tejaswini Shinde
 @Date: 2022-04-28 16.57
 @Last Modified by: Tejaswini Shinde
-@Last Modified time: None
+@Last Modified time: 2022-04-28 14.25
 @Title : Print 2D array
 """
 
-def two_dim_array(rows,colums):
+def two_dim_array():
     """
         Description:
-            adding values in 2D Array
+            Adding values in 2D Array
         Parameter:
-            Rows and Colums
+            None
         Return:
             None
     """
-
-    array = []  
+    inputs = [int(i) for i in input("Enter the no of rows , columns separate by comma :").split(",")]
+    elements = input("Enter the (rows X colums) elements separated by comma :").split(",")
+    rows = input[0]
+    colums= input[1]  
+    two_dim_array=[]
     for i in range(rows):  
-        row = []  
+        one_dim_array =[]
         for j in range(colums):
-            num = int(input("Enter the matrix"))  
-            row.append(num)  
-        array.append(row)
-
-    for i in array:
-        for j in i:
-            print(j, end=" ")
-        print()
-
-two_dim_array(4,2)
+            one_dim_array.append(elements[i*colums+j])
+        two_dim_array.append(one_dim_array)
+    print(two_dim_array)
+two_dim_array()
    
