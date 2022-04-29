@@ -1,8 +1,8 @@
 """
 @Author: Tejaswini Shinde
-@Date: 2022-04-28 17.36
+@Date: 2022-04-28 17:36
 @Last Modified by: Tejaswini Shinde
-@Last Modified time: None
+@Last Modified time: 2022-04-29 15:15
 @Title : Sum of three Integer adds to Zero.
 
 """
@@ -30,8 +30,21 @@ def findTriplets(arr, n):
                     SumOfThreeNumbers= True
     
     if (SumOfThreeNumbers == False):
-        print(" not found ")
-arr = [0, -1, 2, -3, 1]
-n = len(arr)
+        print(" Triplets is not found ")
+
+
+if __name__ == '__main__':
+    while True:
+        n = int(input("Enter Length Of An Array"))
+        if n<3:
+            n = int(input("Enter Valid Length Of An Array"))
+        else:   
+            arr = [n]
+            break   
+
+    for i in range(n):
+        print("Enter ",i,": ")
+        arr.append(int(input()))
+
 findTriplets(arr, n)
  
