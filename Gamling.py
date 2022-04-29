@@ -1,44 +1,44 @@
 """
 @Author: Tejaswini Shinde
-@Date: 2022-04-29 8.41
+@Date: 2022-04-29 8:20
 @Last Modified by: Tejaswini Shinde
-@Last Modified time: None
+@Last Modified time: 4:20
 @Title : Gambling.
 
 """
 import random
 
-def gambling():
+def gambling(stack,goal,no_of_trial):
      """
         Description:
-            Whether the player will win or lose and the percentage of win and loss
+            Whether the player play the Gambler game
         Parameter:
-            None
+            Passing value of stake goal and number of times trial
         Return:
-            None
+            Return win or losethe percentage of win and loss
     """
 
-     inputs = [int(i) for i in input("Enter the stake,bet,goal,no.fo cases separate by comma :").split(",")]
-     no_of_cases = inputs[3]
+     bet=0
      no_of_wins = 0
-     no_of_loss = 0
-     for i in range(no_of_cases):
-        stake = inputs[0]
-        bet = inputs[1]
-        goal = inputs[2]
-        while stake >= bet:
-            result = random.randint(0, 1)
-            if result == 0:
-                stake -= bet
-            else:
-                stake += bet
-            if stake >= goal:
-                no_of_wins += 1
-                break
-            elif stake < bet:
-                no_of_loss += 1
-                break
-     print(f"Total no of wins {no_of_wins}")
-     print(f"Percentage of win :{round(no_of_wins * 100 / (no_of_wins + no_of_loss), 2)}% ,Percentage of loss :{round(no_of_loss * 100 / (no_of_wins + no_of_loss), 2)}%")
+     for i in range(no_of_trial):
 
-gambling()
+        win=0
+        doller=stack
+        while doller > 0 and doller < goal:
+            bet+=1
+            result = random.randint(0, 1)
+            if result == win:
+                doller += 1
+            else:
+                doller -= 1
+            if doller == goal:
+                no_of_wins += 1
+              
+     percentageOfWin=(no_of_wins/no_of_trial)*100
+     print("Percentage of win : ", percentageOfWin)
+     print("Percentage of loss : ", 100-percentageOfWin)
+
+stack =int (input("Enter the value od Stack: "))
+goal=int(input("Enter the goal :"))
+no_of_trial=int(input("Enter number of time you want to trial:"))
+gambling(stack,goal,no_of_trial)
