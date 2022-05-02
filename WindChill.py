@@ -6,7 +6,6 @@
 @Title : Prints the wind chill.
 
 """
-import math
 
 if __name__ == '__main__':
     t = float(input("Enter value of  Temperature :- "))
