@@ -20,14 +20,14 @@ def distinct_coupen_number(n):
     list=[]
     i=1
     while i<(n+1):
-        random = random.randint(0,9)
-        if random in list: 
+        ran= random.randint(0,9)
+        if ran in list: 
             i-=1
         else:
-            list.append(random)
+            list.append(ran)
 
-            i+=1
-    print("Cupon Code is ", list)
-
+        i+=1
+    #print("Cupon Code is : " *list)
+    print(" ".join(map(str, list)))
 n =int(input("Enter how many digit of coupon codes you need: "))
 distinct_coupen_number(n)
