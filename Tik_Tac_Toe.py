@@ -9,8 +9,6 @@
 """
 import random
 
-print("Hurry!Welcome to the TIK_TAC_TOE Game!")
-
 """This class is about tic tac toe game. Where this game will played between computer and human"""
 class TicTacToe:
 
