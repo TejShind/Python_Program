@@ -1,8 +1,8 @@
 """
 @Author: Tejaswini Shinde
-@Date: 2022-04-27 22.49
+@Date: 2022-04-27 22:49
 @Last Modified by: Tejaswini Shinde
-@Last Modified time: 2022-04-29
+@Last Modified time: 2022-04-29  14:51
 @Title : Power Of two
 """
 def power_of_two(n):

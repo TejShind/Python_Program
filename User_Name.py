@@ -6,7 +6,6 @@
 @Title :Printing the String with User Name
 """
 
-
 def user_name():
     """
         Description:
@@ -18,7 +17,7 @@ def user_name():
     """
 
     print("Hello,How Are You! ")
-#if __name__ =='__main__':
+if __name__ =='__main__':
 
     name = input("Enter the user name :\n")
     while True:

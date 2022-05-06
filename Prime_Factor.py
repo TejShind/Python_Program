@@ -2,42 +2,35 @@
 @Author: Tejaswini Shinde
 @Date: 2022-04-28 8.30
 @Last Modified by: Tejaswini Shinde
-@Last Modified time: None
+@Last Modified time: 2022-05-02 10:44
 @Title : Prime Factor
 """
 
 import math
 
 
-def prime_factor():
+def prime_factor(n):
     """
         Description:
             Gives the prime factor of given number
         Parameter:
-            None
+            Passing number n
         Return:
-            Returning nothing but printing factors
+            Returning prime factor od n value
     """
 
-    number = int(input("Enter the positive number to find its prime factor :"))
-    if number == 0 or number == 1:
-        print(f"{number} has no prime factor")
-        return
-    num1 = 0
-    while number % 2 == 0:
-        if num1 == 0:
-            print(2)
-            num1 = 1
-        number = number // 2
-    for i in range(3, int(math.sqrt(number)) + 1, 2):
-        num2 = 0
-        while number % i == 0:
-            if num2 == 0:
-                print(i)
-                num2 = 1
-            number = number // i
-    if number > 2:
-        print(number)
+    factors=[]
+    i=2
+    while(i <= n):
+        if(n % i == 0):
+            factors.append(i)
+            n=n/i
+            
+        else:
+            i+=1 
 
+    return factors   
 
-prime_factor()
+n = int(input("Enter any Number for calculating the prime factors: "))
+
+print(prime_factor(n))
